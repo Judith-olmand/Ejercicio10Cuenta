@@ -1,4 +1,14 @@
-package PACKAGE_NAME;
+public class CuentaCorriente extends Cuenta{
+    private int sobregiro;
 
-public class CuentaCorriente {
+    public CuentaCorriente(String numeroCuenta, double saldo, String titular, int sobregiro) {
+        super(numeroCuenta,saldo,titular);
+        this.sobregiro = sobregiro;
+    }
+
+    @Override
+    public void mostrarInfo() {
+        super.mostrarInfo();
+        System.out.println("Sobregiro: " + sobregiro);
+    }
 }
